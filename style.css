@@ -120,6 +120,12 @@ nav {
     /* background-color: red; */
     height: 700px;
     position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.home-banner {
+    filter: brightness(.6);
 }
 
 .cont-banner img {
@@ -131,12 +137,13 @@ nav {
 
 .cont-banner .content-banner{
     /* background-color: black; */
-    transform: translateY(200px) translateX(50px);
+    transform: translateY(10px);
     width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .cont-banner div h1{
@@ -386,11 +393,11 @@ footer {
 
 
 .shop-banner {
-    filter: brightness(.7);
+    filter: brightness(.6);
 }
 
 .cont-banner-shop {
-    transform: translateY(200px);
+    transform: translateY(50px); 
     width: 100%;
     display: flex;
     flex-direction: column;
