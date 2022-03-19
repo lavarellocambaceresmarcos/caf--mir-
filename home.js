@@ -1,5 +1,9 @@
+
+// Wellcoming Alert  
 alert("Please, respond the following question");
 
+
+// Age prompt
 let age = prompt("How old are you?");
 console.log("El usuario tiene " + age + " años");
 
@@ -10,6 +14,7 @@ while (age < 18) {
 }
 
 
+// Client prompt
 let data = prompt("Is this the first time you visit us?");
 
 let name = prompt("What's your name?");
@@ -27,4 +32,17 @@ if ((data == "yes") || (data == "Yes" )) {
 }
 
 
+// Packs prompt
 
+let repeat = parseInt(prompt("How many packs de you want to buy?"));
+
+let packs = alert("You've bought " + repeat + " packs");
+
+// packs;
+
+let i = 1;
+
+while (i <= repeat){
+    console.log("Se quitaron un total de " + i + " pack/s del stock total")
+    i= i + 1;
+}
