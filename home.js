@@ -1,5 +1,5 @@
 
-// Wellcoming Alert  
+// Wellcoming Alert
 alert("Please, respond the following question");
 
 
@@ -38,7 +38,7 @@ let repeat = parseInt(prompt("How many packs de you want to buy?"));
 
 let packs = alert("You've bought " + repeat + " packs");
 
-// packs;
+packs;
 
 let i = 1;
 

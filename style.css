@@ -406,7 +406,22 @@ footer {
     text-align: center;
 }
 
-
 .scnd-prd-tittle{
     margin-top: 300px;
 }
+
+
+/* ABOUT US */
+
+.media-card-text {
+    text-align: center;
+}
+
+
+/* CONTACT */
+
+.cont-banner-contact {
+    margin-left: 1vw;
+}
+
+
