@@ -1,48 +1,123 @@
+// Welcoming 
 
-// Wellcoming Alert
-alert("Please, respond the following question");
+let welcome = alert("Welcome to Café Miró");
 
 
-// Age prompt
-let age = prompt("How old are you?");
-console.log("El usuario tiene " + age + " años");
 
-while (age < 18) {
-    alert("You can't buy coffe");
-    console.log("Un menor de edad intentó ingresar al sitio");
-    age = prompt("How old are you?");
+// NEW CALL TO ACTION OPTIMAZED
+let actions = prompt("Choose one option" + "\n" + "\n" + "1- Product List" + "\n" + "\n" + "2- Register" + "\n" + "\n" + "3- Enter" + "\n" + "\n");
+
+
+// For user registration --> blocking access
+let i = 0;
+
+function menu(a) {
+    if (a == 1) {
+        let products = prompt("Choose one option" + "\n" + "\n" + "1- Black coffee $500" + "\n" + "\n" + "2- Regular coffee $400" + "\n" + "\n" + "3- Toast coffee $500" + "\n" + "\n" + "4- Return to menu" + "\n" + "\n");
+        function buy(b) {
+            // If the user doesn't have an account 
+            if (i<1){
+                alert("You must be registered before buying")
+                let actions = prompt("Choose one option" + "\n" + "\n" + "1- Product List" + "\n" + "\n" + "2- Register" + "\n" + "\n" + "3- Enter" + "\n" + "\n");
+                menu(actions);
+            }
+            else if (b == 1) {
+                const quantity1 = prompt("How many packs would you buy?");
+                for (let x = 1; x<=quantity1;x=x+1){
+                    console.log(x + "Black pack/s off");
+                }
+                alert("You've added " + quantity1 + " packs of Black Coffee");
+
+                const count1 = quantity1 * 500;
+
+                console.log(count1); 
+
+
+                let products = prompt("Choose one option" + "\n" + "\n" + "1- Black coffee $500" + "\n" + "\n" + "2- Regular coffee $400" + "\n" + "\n" + "3- Toast coffee $500" + "\n" + "\n" + "4- Return to menu" + "\n" + "\n");
+                buy(products);
+            } else if (b == 2) {
+                const quantity2 = prompt("How many packs would you buy?");
+                for (let x = 1; x<=quantity2;x=x+1){
+                    console.log(x + "Regular pack/s off");
+                }
+                alert("You've added " + quantity2 + " packs of Regular Coffee");
+
+                const count2 = quantity2 * 500;
+
+                console.log(count2); 
+
+
+                let products = prompt("Choose one option" + "\n" + "\n" + "1- Black coffee $500" + "\n" + "\n" + "2- Regular coffee $400" + "\n" + "\n" + "3- Toast coffee $500" + "\n" + "\n" + "4- Return to menu" + "\n" + "\n");
+                buy(products);
+            } else if (b == 3) {
+                const quantity3 = prompt("How many packs would you buy?");
+                for (let x = 0; x<=quantity3;x=x+1){
+                    console.log(x + "Toast pack/s off");
+                }
+                alert("You've added " + quantity3 + " packs of Toast Coffee");
+
+                const count3 = quantity3 * 500;
+
+                console.log(count3);
+
+                let products = prompt("Choose one option" + "\n" + "\n" + "1- Black coffee $500" + "\n" + "\n" + "2- Regular coffee $400" + "\n" + "\n" + "3- Toast coffee $500" + "\n" + "\n" + "4- Return to menu" + "\n" + "\n");
+                buy(products);
+
+            }else if (b == 4) {
+                let actions = prompt("Choose one option" + "\n" + "\n" + "1- Product List" + "\n" + "\n" + "2- Register" + "\n" + "\n" + "3- Enter" + "\n" + "\n");
+                menu(actions);
+            }
+        }
+        buy(products);
+    // User registration
+    } else if (a == 2) {
+        let name = prompt("Enter you user name");
+        let email = prompt("Enter your email");
+        let passw = prompt("Create your password");
+        console.log("User : " + name);
+        console.log("Email : " + email);
+        console.log("Passw : " + passw);
+        i = i +1;
+        let actions = prompt("Choose one option" + "\n" + "\n" + "1- Product List" + "\n" + "\n" + "2- Register" + "\n" + "\n" + "3- Enter" + "\n" + "\n");
+        menu(actions);
+    // Entering the site without doing any action
+    } else if (a == 3) {
+        alert("Welcome to Café Miró");
+    // Not valid option for iregular values
+    } else {
+        alert("That's not a valid option");
+        let actions = prompt("Choose one option" + "\n" + "\n" + "1- Product List" + "\n" + "\n" + "2- Register" + "\n" + "\n" + "3- Enter" + "\n" + "\n");
+        menu(actions);
+    }
 }
 
 
-// Client prompt
-let data = prompt("Is this the first time you visit us?");
-
-let name = prompt("What's your name?");
-console.log("El nombre del usuario es " + name);
+// executing the function
+menu(actions);
 
 
-if ((data == "yes") || (data == "Yes" )) {
-    alert("Welcome to Café Miró, " + name);
-    console.log("El usuario " + name + " ingresó por primera vez al sitio")
-} else if ((data == "no")||(data == "No")) {
-    alert("Hi " + name +"!" + " Welcome back. You know what to do budy :)");
-    console.log("El usuario " + name + " es un usuario recurrente")
-}else {
-    console.log("El usuario " + name + " no ingresó datos relevantes")
-}
 
 
-// Packs prompt
 
-let repeat = parseInt(prompt("How many packs de you want to buy?"));
+// TEST
 
-let packs = alert("You've bought " + repeat + " packs");
+// let ingNumero = prompt("ingrese un numero");
 
-packs;
+// function data (a) {
+//     if (a == 1) {
+//         alert("a es igual a 1");
+//         data(prompt("Ingrese un numero"));
+//     }else if (a == 2) {
+//         alert("a es igual a 2");
+//         data(prompt("Ingrese un numero"));
+//     }else if (a == 3) {
+//         alert("a es igual a 3");
+//         data(prompt("Ingrese un numero"));
+//     }else {
+//         alert("Esa opción no es válida");
+//         data(prompt("Ingrese un numero"));
+//     }
+// };
 
-let i = 1;
+// data(ingNumero);
 
-while (i <= repeat){
-    console.log("Se quitaron un total de " + i + " pack/s del stock total")
-    i= i + 1;
-}
