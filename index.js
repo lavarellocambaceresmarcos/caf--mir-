@@ -157,7 +157,7 @@ function actions(a) {
                     if (buy == 1) {
                         alert("Payment done! Thank you : )");
 
-                        cart.splice(0, cartLengh);
+                        cart.splice(0,1000000);
 
                         let a = prompt("Choose an option" + "\n" + "\n" + "1- shop " + "\n" + "\n" + "2- Cart " + "\n" + "\n" + "3- Enter ");
                         actions(a);
@@ -191,7 +191,6 @@ function actions(a) {
                                 cart.splice(deleted,1);
                                 console.log(cart.length);
                                 
-                                //  /////////
                                 let cartMenu = prompt("Select an option " + "\n" + "\n" + "1- View cart" + "\n" + "\n" + "2- Return" + "\n" + "\n");
 
                                 theCartMenu(cartMenu);
