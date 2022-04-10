@@ -129,8 +129,8 @@ nav {
 
 .cont-banner-home .home-banner {
     width: 100%;
-    height: 100%;
-    object-fit:cover;
+    height: auto;
+    object-fit:contain;
     position: absolute;
     z-index: -1;
 }
@@ -203,20 +203,6 @@ nav {
     rotate: 5deg;
     transition: all 1.5s ease;
 }
-
-/* @keyframes jump {
-    100% {
-        transform: translateY(-10px);
-    }
-
-    50% {
-        transform: translateY(20px);
-    }
-
-    0% {
-        transform: translateY(-10px);
-    }
-} */
 
 
 /* home - main */
@@ -444,13 +430,9 @@ footer {
 .cont-banner-shop {
     display: flex;
     align-items: center;
+    height: 800px;
 }
 
-.cont-img-shop {
-    /* background-color: aqua; */
-    height: 450px;
-    flex: 1;
-}
 
 .cont-img-shop img {
     /* background-color: rgb(90, 90, 209); */
@@ -462,23 +444,36 @@ footer {
 }
 
 
-.img-shop:hover  {
-    /* transition: all ease 5s; */
-    transform: translatey(20px);
-    transition: all 2s ease;
+.content-banner-shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    /* background-color: red; */
+    transform: translateY(-80px);
 }
 
 
+.cont-bottn-banner-shop {
+    margin-top: 40px;
+}
 
 
-.content-banner-shop {
-    /* background-color: red; */
+.cont-bottn-banner-shop a {
+    background-color: rgba(210, 139, 73, 0.911);
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 25px;
+    font-size: 30px;
+    width: 250px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content:flex-end;
-    flex: 1;
-    transform: translateX(80px);
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px .3px rgba(43, 41, 41, 0.8);
+}
+
+.cont-bottn-banner-shop a:hover {
+    background-color: rgb(184, 114, 48);
 }
 
 .cont-tit-shop {
@@ -507,15 +502,16 @@ footer {
 
 .shop-banner {
     width: 100%;
-    height: 100%;
-    object-fit:cover;
+    height: auto;
+    object-fit:contain;
     position: absolute;
     z-index: -1;
 }
 
 
-/* ABOUT US */
 
+
+/* ABOUT US */
 
 .cont-banner-about {
     /* background-color: red; */
@@ -529,10 +525,11 @@ footer {
 
 .cont-banner-about .about-banner {
     width: 100%;
-    height: 100%;
-    object-fit:cover;
+    height: auto;
+    object-fit:contain;
     position: absolute;
     z-index: -1;
+
 }
 
 .cont-banner-about .content-banner-about{
@@ -745,9 +742,7 @@ textarea {
 
 .false-bg-shop {
     width: 100%;
-    height: 50px;
-    /* background-color: red; */
-    margin-bottom: 20vh;
+    height: 7vh;
 }
 
 .false-bg-about {
