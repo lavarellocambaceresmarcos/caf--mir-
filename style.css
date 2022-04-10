@@ -116,36 +116,28 @@ nav {
 
 /* Home banner */
 
-.cont-banner {
+.cont-banner-home {
     /* background-color: red; */
-    height: 700px;
+    height: 600px;
+    width: 100%;
     position: relative;
     display: flex;
-    justify-content: center;
+    
 }
 
-.home-banner {
-    filter: brightness(.9);
-}
 
-.cont-banner video {
+
+.cont-banner-home .home-banner {
     width: 100%;
     height: 100%;
     object-fit:cover;
     position: absolute;
+    z-index: -1;
 }
 
-.cont-banner img {
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    position: absolute;
-}
-
-.cont-banner .content-banner{
+.cont-banner-home .content-banner{
+    flex: 1.5;
     /* background-color: black; */
-    transform: translateY(10px);
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -153,13 +145,23 @@ nav {
     text-align: center;
 }
 
-.cont-banner div h1{
+.cont-banner-home div .home-tittle{
    /* background-color: red; */
    width: 100%;
    font-size: 90px;
    color: #fff;
    font-weight:bolder;
 }
+
+.cont-banner-home div p{
+    /* background-color: red; */
+    width: 100%;
+    font-size: 40px;
+    color: #fff;
+    font-weight:lighter;
+    margin-bottom: 20px;
+    color: rgb(202, 202, 202);
+ }
 
 .cont-bottn-banner a {
     background-color: rgba(210, 139, 73, 0.911);
@@ -184,6 +186,39 @@ nav {
 }
 
 
+.cont-cof-bag {
+    flex: 1;
+    transform: translateX(-100px);
+    /* background: blue; */
+}
+
+.coffee-bag {
+    height: 600px;
+    /* background-color: red; */
+    transition: all 1.5s ease;
+    cursor: pointer;
+}
+
+.coffee-bag:hover {
+    rotate: 5deg;
+    transition: all 1.5s ease;
+}
+
+/* @keyframes jump {
+    100% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    0% {
+        transform: translateY(-10px);
+    }
+} */
+
+
 /* home - main */
 
 main {
@@ -192,7 +227,7 @@ main {
 }
 
 .cont-tittle {
-    margin-top: 100px;
+    margin-top: 300px;
     /* background-color: red; */
     text-align: center;
 }
@@ -406,14 +441,103 @@ footer {
 
 /*  SHOP styles */
 
-
-.shop-banner {
-    filter: brightness(.4);
+.cont-banner-shop {
+    display: flex;
+    align-items: center;
 }
 
-.cont-banner-shop {
-    transform: translateY(50px); 
+.cont-img-shop {
+    /* background-color: aqua; */
+    height: 450px;
+    flex: 1;
+}
+
+.cont-img-shop img {
+    /* background-color: rgb(90, 90, 209); */
+    margin-left: 50px;
+    height: 100%;
+    cursor: pointer;
+    transition: all 1.5s ease;
+    transform-style: preserve-3d;
+}
+
+
+.img-shop:hover  {
+    /* transition: all ease 5s; */
+    transform: translatey(20px);
+    transition: all 2s ease;
+}
+
+
+
+
+.content-banner-shop {
+    /* background-color: red; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    flex: 1;
+    transform: translateX(80px);
+}
+
+.cont-tit-shop {
+    /* background-color: red; */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.cont-tit-shop h1 {
+    font-size: 90px;
+}
+
+.cont-tit-shop hr {
+    width: 50%;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.cont-tit-shop p {
+    font-size: 35px;
+    font-weight: lighter;
+}
+
+.shop-banner {
     width: 100%;
+    height: 100%;
+    object-fit:cover;
+    position: absolute;
+    z-index: -1;
+}
+
+
+/* ABOUT US */
+
+
+.cont-banner-about {
+    /* background-color: red; */
+    height: 700px;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+
+
+.cont-banner-about .about-banner {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    position: absolute;
+    z-index: -1;
+}
+
+.cont-banner-about .content-banner-about{
+    flex: 1.5;
+    /* background-color: black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -421,17 +545,18 @@ footer {
     text-align: center;
 }
 
-.scnd-prd-tittle{
-    margin-top: 300px;
+.content-banner-about h1{
+   /* background-color: red; */
+   width: 100%;
+   font-size: 90px;
+   color: #fff;
+   font-weight:bolder;
 }
 
 
-/* ABOUT US */
 
-.about-banner {
-    filter: brightness(.5);
-}
 
+/* Main - About */
 .media-card-text {
     text-align: center;
 }
@@ -474,7 +599,7 @@ footer {
 
 
 .fast-icon {
-    background-color: rgba(210, 139, 73, 1);
+    background-color: rgba(229, 178, 101, 1);
     position: absolute;
     padding: 60px 50px;
     top: 0;
@@ -544,7 +669,7 @@ form {
 }
 
 .talk-icon {
-    background-color: rgba(210, 139, 73, 1);
+    background-color: rgba(229, 178, 101, 1);
     position: absolute;
     padding: 60px 50px;
     top: 0;
@@ -611,4 +736,30 @@ textarea {
     margin-bottom: 40vh;
 }
 
+.false-bg-home {
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    margin-bottom: 8vh;
+}
 
+.false-bg-shop {
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    margin-bottom: 20vh;
+}
+
+.false-bg-about {
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    margin-bottom: 8vh;
+}
+
+.false-bg-contact {
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    margin-bottom: 8vh;
+}
