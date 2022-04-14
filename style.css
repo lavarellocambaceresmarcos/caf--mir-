@@ -95,10 +95,7 @@ nav {
     align-items: center;
     list-style-type: none;
 }
-/* 
-.nav-list li {
-    background-color: rgb(123, 123, 189);
-} */
+
 
 .nav-list li a {
     color: rgb(235, 228, 228);
@@ -117,7 +114,6 @@ nav {
 /* Home banner */
 
 .cont-banner-home {
-    /* background-color: red; */
     height: 600px;
     width: 100%;
     position: relative;
@@ -137,7 +133,6 @@ nav {
 
 .cont-banner-home .content-banner{
     flex: 1.5;
-    /* background-color: black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -146,7 +141,6 @@ nav {
 }
 
 .cont-banner-home div .home-tittle{
-   /* background-color: red; */
    width: 100%;
    font-size: 90px;
    color: #fff;
@@ -154,7 +148,6 @@ nav {
 }
 
 .cont-banner-home div p{
-    /* background-color: red; */
     width: 100%;
     font-size: 40px;
     color: #fff;
@@ -180,7 +173,6 @@ nav {
 }
 
 .cont-bottn-banner {
-    /* background-color: green; */
     width: 100%;
     margin-top: 40px;
 }
@@ -189,12 +181,10 @@ nav {
 .cont-cof-bag {
     flex: 1;
     transform: translateX(-100px);
-    /* background: blue; */
 }
 
 .coffee-bag {
     height: 600px;
-    /* background-color: red; */
     transition: all 1.5s ease;
     cursor: pointer;
 }
@@ -214,7 +204,6 @@ main {
 
 .cont-tittle {
     margin-top: 300px;
-    /* background-color: red; */
     text-align: center;
 }
 
@@ -227,7 +216,6 @@ main {
 /* Card */
 
 .card {
-    /* background-color: red; */
     width: 300px;
     display: flex;
     flex-direction: column;
@@ -238,6 +226,7 @@ main {
 .card img {
     width: 80%;
 }
+
 
 .card .name {
     font-weight: bolder;
@@ -289,7 +278,6 @@ main {
 }
 
 .card-brand {
-    /* background-color: red; */
     width: 300px;
     position: relative;
     display: flex;
@@ -322,14 +310,12 @@ main {
 
 
 .final-brand-cont {
-    /* background-color: red; */
     display: flex;
     justify-content: space-around;
     margin-top: 300px;
 }
 
 .cont-color-img {
-    /* background-color: green; */
     height: 600px;
     width: 350px;
     position: relative;
@@ -348,9 +334,7 @@ main {
     z-index: -1;
 }
 
-/* .cont-text-btn-tle {
-    background-color: red;
-} */
+
 
 .cont-text-btn-tle h2 {
     font-size: 40px;
@@ -431,16 +415,6 @@ footer {
     display: flex;
     align-items: center;
     height: 800px;
-}
-
-
-.cont-img-shop img {
-    /* background-color: rgb(90, 90, 209); */
-    margin-left: 50px;
-    height: 100%;
-    cursor: pointer;
-    transition: all 1.5s ease;
-    transform-style: preserve-3d;
 }
 
 
@@ -726,6 +700,9 @@ textarea {
    cursor: pointer;
 }
 
+
+/* FALSE BG FOR HEADER */
+
 .false-bg {
     width: 100%;
     height: 50px;
@@ -757,4 +734,76 @@ textarea {
     height: 50px;
     /* background-color: red; */
     margin-bottom: 8vh;
+}
+
+.false-bg-cart {
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    margin-bottom: 8vh;
+}
+
+
+/* Cart styles */
+
+
+.section-cart {
+    /* background-color: red; */
+    margin-top: 30vh;
+}
+
+
+.cont-prod-cart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.img-cart {
+    height: 200px;
+    box-shadow: 5px 5px 10px 2px rgba(109, 109, 109, 0.8);
+    border-radius: 50%;
+}
+
+.cont-plus-minus {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+}
+
+.cont-plus-minus button {
+    width: 50px;
+}
+
+.cont-total {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.cont-total p {
+    margin: 20px;
+    font-weight: bolder;
+    color: rgb(51, 50, 50);
+}
+
+.cont-total button {
+    border: none;
+    background-color: rgb(23, 167, 23);
+    color: white;
+    width: 15%;
+    height:50px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px 5px;
+    font-weight: bolder;
+}
+
+
+.cont-total button:hover {
+    background-color: rgb(83, 204, 83);
 }

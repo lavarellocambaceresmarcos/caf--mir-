@@ -15,7 +15,7 @@
         <!--  CSS  -->
         <link rel="stylesheet" href="style.css">
         <!-- Tittle -->
-        <title> About - Café Miró</title>
+        <title> Cart - Café Miró</title>
     </head>
 <body>
     <!-- Header -->
@@ -31,16 +31,112 @@
                 <li><a href="shop.html" class="link">Shop</a></li>
                 <li><a href="about.html" class="link">About Us</a></li>
                 <li><a href="contact.html" class="link">Contact</a></li>
-                <li><a href=""><i class="fa-solid fa-bag-shopping shop-icon"></i></a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping shop-icon"></i></a></li>
             </ul>
         </nav>
     </header>
     <!-- False section -->
-    <div class="false-bg">
+    <div class="false-bg-cart">
 
     </div>
-    <main>
+    <!-- banner - Hero -->
+    <section class="cont-banner-home banner-cart">
+        <img src="img/cart-banner.png" alt="banner" class="home-banner">
+        <div class="content-banner">
+            <h1 class="home-tittle">
+                Miró App
+            </h1>
+            <p>
+                Try it for free
+            </p>
+            <div class="cont-bottn-banner">
+                <a href="">Download</a>
+            </div>
+        </div>
+    </section>
+    <main class="main-cart">
+        <!-- Product section -->
+        <section class="product-gallery">
+            <div class="card">
+                <img src="img/black-removebg-preview.png" alt="coffee pack">
+                <p class="name">Black Coffee</p>
+                <p class="price">$800</p>
+                <button id="add" class="card-button buy-btn">Add to cart</button>
+            </div>
+            <div class="card">
+                <img src="img/premium.png" alt="coffee pack">
+                <p class="name">Coffee Name</p>
+                <p class="price">$400</p>
+                <button id="add" class="card-button buy-btn">Add to cart</button>
+            </div>
+            <div class="card">
+                <img src="img/brn-removebg-preview.png" alt="coffee pack">
+                <p class="name">Coffee Name</p>
+                <p class="price">$600</p>
+                <button id="add" class="card-button buy-btn">Add to cart</button>
+            </div>
+        </section>
+        <!-- cart section -->
+        <section class="section-cart">
+            <!-- prod-1 -->
+            <div id="cont-cart-item" class="cont-prod-cart">
+                <img src="img/premium.png" alt="coffe" class="img-cart">
+                <div class="cont-desc-cart">
+                    <p>Coffee Name</p>
+                    <p>Regular Size</p>
+                </div>
+                <div class="cont-plus-minus">
+                    <button class="plus-one"><i class="fa-solid fa-circle-plus"></i></button>
+                    <button class="minus-one"><i class="fa-solid fa-circle-minus"></i></button>
+                </div>
+                <p class="item-quantity-one quant">1</p>
+                <div class="cont-prod-price">
+                    <p>$ <span class="price-one">800</span></p>
+                </div>
+                <button class="del"><i class="fa-solid fa-circle-xmark"></i></button> 
+            </div>
+            
+            <!-- prod-2 -->
+            <div id="cont-cart-item" class="cont-prod-cart">
+                <img src="img/brn-removebg-preview.png" alt="coffe" class="img-cart">
+                <div class="cont-desc-cart">
+                    <p>Coffee Name</p>
+                    <p>Regular Size</p>
+                </div>
+                <div class="cont-plus-minus">
+                    <button class="plus-two"><i class="fa-solid fa-circle-plus"></i></button>
+                    <button class="minus-two"><i class="fa-solid fa-circle-minus"></i></button>
+                </div>
+                <p class="item-quantity-two quant">1</p>
+                <div class="cont-prod-price">
+                    <p>$ <span class="price-two">400</span></p>
+                </div>
+                <button class="del"><i class="fa-solid fa-circle-xmark"></i></button> 
+            </div>
 
+            <!-- prod-3 -->
+            <div id="cont-cart-item" class="cont-prod-cart">
+                <img src="img/black-removebg-preview.png" alt="coffe" class="img-cart">
+                <div class="cont-desc-cart">
+                    <p>Coffee Name</p>
+                    <p>Regular Size</p>
+                </div>
+                <div class="cont-plus-minus">
+                    <button class="plus-three"><i class="fa-solid fa-circle-plus"></i></button>
+                    <button class="minus-three"><i class="fa-solid fa-circle-minus"></i></button>
+                </div>
+                <p class="item-quantity-three quant">1</p>
+                <div class="cont-prod-price">
+                    <p>$ <span class="price-three">600</span></p>
+                </div>
+                <button class="del"><i class="fa-solid fa-circle-xmark"></i></button> 
+            </div>
+            <!-- TOTAL -->
+            <div class="cont-total">
+                <p>TOTAL $<span id="total">0</span></p>
+                <button id="pay">PAY</button>
+            </div>
+        </section>
     </main>
     <!--  Footer section -->
     <footer>
@@ -78,5 +174,8 @@
             </ul>
         </div>
     </footer>
+
+    <!-- JS -->
+    <script src="index.js"></script>
 </body>
 </html>
