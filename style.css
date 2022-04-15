@@ -748,6 +748,11 @@ textarea {
 /* Cart styles */
 
 
+.hr-total {
+    width: 100%;
+}
+
+
 .section-cart {
     /* background-color: red; */
     margin-top: 30vh;
