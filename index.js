@@ -268,11 +268,8 @@ payment.addEventListener('click', function (event) {
 
 // Updating price
 
-updateCartTotal()
-
 // Cart total calculation
 function updateCartTotal() {
-
     var total = 0;
 
     total = total + (quantityOne * priceOne) + (quantityTwo * priceTwo) + (quantityThree * priceThree);
