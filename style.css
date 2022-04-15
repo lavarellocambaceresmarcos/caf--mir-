@@ -769,7 +769,6 @@ textarea {
 .cont-plus-minus {
     display: flex;
     flex-direction: column;
-    background-color: red;
 }
 
 .cont-plus-minus button {
@@ -806,4 +805,35 @@ textarea {
 
 .cont-total button:hover {
     background-color: rgb(83, 204, 83);
+}
+
+
+.icons-cart {
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgba(210, 139, 73, 1);
+}
+
+.fa-circle-plus , .fa-circle-minus , .fa-circle-xmark{
+    box-shadow: 5px 5px 10px 2px rgba(105, 105, 105, 0.8);
+    border-radius: 50%;
+}
+
+
+.del-one , .del-two , .del-three {
+    border: none;
+    background-color: transparent;
+    font-size: 30px;
+    cursor: pointer;
+    color: rgb(231, 82, 82);
+}
+
+
+/* Cart actions styles -----> Remove and add */
+
+
+.delete {
+    display: none;
 }

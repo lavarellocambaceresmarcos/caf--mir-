@@ -1,10 +1,10 @@
 
-// Deletion button
-var removeButtons = document.getElementsByClassName('del');
+// Prices
 
 var priceOne = parseInt(document.getElementsByClassName('price-one')[0].innerHTML);
 var priceTwo = parseInt(document.getElementsByClassName('price-two')[0].innerHTML);
 var priceThree = parseInt(document.getElementsByClassName('price-three')[0].innerHTML);
+
 
 
 
@@ -145,26 +145,112 @@ minusButtonThree.addEventListener('click', function () {
 
 
 
+// ------------> ADD TO CART BUTTONS <---------- //
+
+
+// ITEM - 1
+var addToCartOne = document.getElementsByClassName('buy-btn-one')[0];
+
+addToCartOne.addEventListener('click', function () {
+
+    document.getElementById('cont-cart-item-one').className = 'cont-prod-cart';
+
+    console.log("Has sumado un elemento a tu carrito");
+
+    quantityOne = quantityOne + 1;
+
+    console.log(quantityOne);
+
+    document.getElementsByClassName('item-quantity-one')[0].innerHTML = quantityOne;
+    updateCartTotal ()
+
+})
+
+// ITEM - 2
+var addToCartTwo = document.getElementsByClassName('buy-btn-two')[0];
+
+addToCartTwo.addEventListener('click', function () {
+
+    document.getElementById('cont-cart-item-two').className = 'cont-prod-cart';
+
+    console.log("Has sumado un elemento a tu carrito");
+
+    quantityTwo = quantityTwo + 1;
+
+    console.log(quantityTwo);
+
+    document.getElementsByClassName('item-quantity-two')[0].innerHTML = quantityTwo;
+    updateCartTotal ()
+
+})
+
+
+
+// ITEM - 3
+var addToCartThree = document.getElementsByClassName('buy-btn-three')[0];
+
+addToCartThree.addEventListener('click', function () {
+
+    document.getElementById('cont-cart-item-three').className = 'cont-prod-cart';
+
+    console.log("Has sumado un elemento a tu carrito");
+
+    quantityThree = quantityThree + 1;
+
+    console.log(quantityThree);
+
+    document.getElementsByClassName('item-quantity-three')[0].innerHTML = quantityThree;
+    updateCartTotal ()
+
+})
+
 
 
 
 // --------> DELETE BUTTON ACTIONS <------------ //
 
 // Here we obtain the actual button element where we are standing  -----> delete button
-for (var i = 0; i < removeButtons.length; i++) {
-    var button = removeButtons[i];
 
-    // Action ---> on click
-    button.addEventListener('click', function (event) {
-        console.log('click');   
-        var clicked = event.target;
-        clicked.parentElement.parentElement.remove();
-
-
-    })
-}
+// DELETE - 1
+var deleteOne = document.getElementsByClassName('del-one')[0];
+deleteOne.addEventListener('click', function (event){
+    deleteOne.parentElement.className = "delete";
+    quantityOne = 0;
+    document.getElementsByClassName('item-quantity-one').innerHTML = quantityOne;
+    updateCartTotal();
+})
 
 
+// DELETE - 2
+var deleteTwo = document.getElementsByClassName('del-two')[0];
+deleteTwo.addEventListener('click', function (event){
+    deleteTwo.parentElement.className = "delete";
+    quantityTwo = 0;
+    updateCartTotal ()
+})
+
+// DELETE - 3
+var deleteThree = document.getElementsByClassName('del-three')[0];
+deleteThree.addEventListener('click', function (event){
+    deleteThree.parentElement.className = "delete";
+    quantityThree = 0;
+    updateCartTotal ()
+})
+
+
+// PAY
+
+var payment = document.getElementById('pay');
+payment.addEventListener('click', function (event){
+    deleteThree.parentElement.className = "delete";
+    deleteTwo.parentElement.className = "delete";
+    deleteOne.parentElement.className = "delete";
+    quantityThree = 0;
+    quantityTwo = 0;
+    quantityOne = 0;
+    alert("Thanks for the payment!")
+    updateCartTotal ()
+})
 
 
 // ---------> TOTAL PRICE <------------//
@@ -183,4 +269,7 @@ function updateCartTotal () {
 
     document.getElementById('total').innerHTML = total;
 }
+
+
+
 
